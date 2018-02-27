@@ -107,6 +107,10 @@ function FC_ContentsCall(strContentsName, strLanguage)
 	{
 		location.href = "Contents/BoardingPass/index.htm";
 	}
+    if(strContentsName == "doodle")
+    {
+        location.href = "Contents/Doodle/index.htm";
+    }
 
 	if(strContentsName == "RobotAvatar")   
 	{

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html" charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+
+
+    <!--<script language="JavaScript" type="text/javascript"
+      src="Scripts/FlashPlayer.js"></script>-->
+    <script language="JavaScript" type="text/javascript"
+            src="../../Scripts/BaseCommand.js"></script>
+    <script language="JavaScript" type="text/javascript"
+            src="../../Scripts/BaseEvent.js"></script>
+    <script language="JavaScript" type="text/javascript"
+            src="../../Scripts/LogConsole.js"></script>
+    <script language="JavaScript" type="text/javascript"
+            src="script.js"></script>
+
+
+
+    <script language="JavaScript" type="text/javascript"
+            src="../../maincontents.js"></script>
+    <script src="../../jquery/jquery-3.2.1.min.js"></script>
+    <script src="../../boots/js/bootstrap.min.js"></script>
+    <script src="../../Scripts/speech.js"></script>
+
+    <script src="../../Scripts/lang.js"></script>
+    <link rel="stylesheet" href="../../boots/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../../css/style_riyadh.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .bmg
+        {
+            background-image: none;
+        }
+        .img-home {
+            position: relative;
+            z-index: 99;
+            margin-top: -32px;
+            margin-left: 96px;
+            height: 66px;
+            cursor: pointer; cursor: hand;
+        }
+        .FArr{
+            margin-top:20px;
+            margin-right:20px;
+            margin-left:20px;
+        }
+
+
+        tbody {
+            display:block;
+            height:1000px;
+            overflow:auto;
+        }
+        thead, tbody tr {
+            display:table;
+            width:100%;
+            table-layout:fixed;
+        }
+        thead {
+            width: calc( 101.5% - 1em )
+        }
+        .hidden {
+            display: none;
+        }
+
+
+        /*Now the styles*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: #ccc;
+            font-family: arial, verdana, tahoma;
+        }
+
+        /*Time to apply widths for accordian to work
+        Width of image = 640px
+        total images = 5
+        so width of hovered image = 640px
+        width of un-hovered image = 40px - you can set this to anything
+        so total container width = 640 + 40*4 = 800px;
+        default width = 800/5 = 160px;
+        */
+
+        .accordian {
+            width: 884px;
+            height: 500px;
+            overflow: hidden;
+            margin: 46px 45px;
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+            -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+            -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+        }
+
+        /*A small hack to prevent flickering on some browsers*/
+        .accordian ul {
+            width: 2000px;
+            /*This will give ample space to the last item to move
+            instead of falling down/flickering during hovers.*/
+        }
+
+        .accordian li {
+            position: relative;
+            display: block;
+            width: 160px;
+            float: left;
+
+            border-left: 1px solid #888;
+
+            box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+            -webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+
+            /*Transitions to give animation effect*/
+            transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            /*If you hover on the images now you should be able to
+            see the basic accordian*/
+        }
+
+        /*Reduce with of un-hovered elements*/
+        .accordian ul:hover li {width: 40px;}
+        /*Lets apply hover effects now*/
+        /*The LI hover style should override the UL hover style*/
+        .accordian ul li:hover {width: 640px;}
+
+
+        .accordian li img {
+            display: block;
+            width: 650px;
+            height: 500px;
+        }
+
+        /*Image title styles*/
+        .image_title {
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            left: 0; bottom: 0;
+            width: 640px;
+
+        }
+        .image_title a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 20px;
+            font-size: 16px;
+        }
+        .container {
+            padding-top: 0px;
+        }
+
+        #gal1 {
+            /* float: left; */
+            width: 500px;
+        }
+        .zoom-left {
+            float: left;
+        }
+    </style>
+
+
+
+    <link href="../../css/Setting.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/Language.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/Main.css" rel="stylesheet" type="text/css" />
+
+    <script language="JavaScript" type="text/javascript" src="../../Scripts/FlashPlayer.js"></script>
+    <script language="JavaScript" type="text/javascript" src="RobotDance.js"></script>
+    <script type="text/javascript">
+
+        function Setting() {
+            location.href = "../../Config/Config.htm";
+        }
+
+    </script>
+
+    <script>
+        $(document).on('click','.elevatezoom-gallery',function(e){
+            e.preventDefault();
+            var dataZoomImg = $(this).attr('data-zoom-image');
+            var dataImg = $(this).attr('data-image');
+            //alert(dataImgg + dataZoomImg);
+            var mainImg = $('#img_01');
+            //mainImg.attr('src',dataImg).attr('data-zoom-image',dataZoomImg).elevateZoom();
+            // $("#img_01").data('zoom-image',dataZoomImg).elevateZoom();
+            mainImg.attr('src',dataImg);
+            mainImg.data('zoom-image',dataZoomImg).elevateZoom();
+
+        });
+        $(document).on('click','.zoom',function(e){
+            e.preventDefault();
+            $("#img_01").elevateZoom();
+        })
+    </script>
+
+
+</head>
+<body>
+
+
+
+<div id="toolBar" class="toolbar">
+    <div id="radiusTool" class="radius__tool">
+        <span>RADIUS</span>
+        <input type="range" name="radiusPoint" id="radiusPoint" class="radius__point" min="1" max="20" step="1" value="10">
+        <span id="radTextRaduis">10</span>
+    </div>
+    <div id="radiusTool" class="radius__tool">
+        <span>BLUR</span>
+        <input type="range" name="radiusBlur" id="radiusBlur" class="radius__point" min="0" max="20" step="1" value="0">
+        <span id="radTextBlur">0</span>
+    </div>
+    <div id="selectColors" class="select__colors">
+        <input type="radio" name="radioColors" id="red" value="#FF0000">
+        <label for="red" class="radio__colors"></label>
+        <input type="radio" name="radioColors" id="blue" value="#2E8B57">
+        <label for="blue" class="radio__colors"></label>
+        <input type="radio" name="radioColors" id="green" value="#1E90FF">
+        <label for="green" class="radio__colors"></label>
+        <input type="radio" name="radioColors" id="yellow" value="#FFFF00">
+        <label for="yellow" class="radio__colors"></label>
+        <input type="radio" name="radioColors" id="pink" value="#FF69B4">
+        <label for="pink" class="radio__colors"></label>
+        <input type="radio" name="radioColors" id="gray" value="#A9A9A9">
+        <label for="gray" class="radio__colors"></label>
+        <input type="radio" name="radioColors" id="black" checked value="#111111">
+        <label for="black" class="radio__colors"></label>
+    </div>
+    <div class="buttons__canvas">
+        <button type="button" id="saveCanvas" class="btn__save">SAVE</button>
+        <button type="button" id="clearCanvas" class="btn__clear">CLEAR</button>
+    </div>
+</div>
+<canvas id="canvas">
+    Sorry, your browser is rubbish.
+</canvas>
+
+
+
+
+</body>
+</html>
