@@ -233,20 +233,18 @@
       border: 3px solid black;
     }
      .icon-title{
-            font-family: Calibri;
+            font-family: CrayonCrumble;
             font-size: 40px;
             color: white;
-            font-style: bold;
             padding-left: 0px;
             padding-top: 25px;
             text-align: center;
             font-weight: 200;
     }
     .icon-rtitle{
-            font-family: Calibri;
+            font-family: CrayonCrumble;
             font-size: 40px;
             color: white;
-            font-style: bold;
             padding-left: 0px;
             padding-top: 17px;
             text-align: center;

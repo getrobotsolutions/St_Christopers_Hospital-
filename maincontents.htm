@@ -30,7 +30,10 @@
   <link rel="stylesheet" href="boots/css/bootstrap.min.css">
 
 <style>
- 
+ @font-face {
+    font-family: CrayonCrumble;
+    src: url('css/Fonts/DK Crayon Crumble.ttf');
+}
     .carousel-caption {
        position: absolute;
     right: 42%;
@@ -57,7 +60,7 @@
     margin-left: 317px;
   }
   .child-title{
-    font-family: Calibri;
+    font-family: CrayonCrumble;
     font-size: 40px;
     font-style: bold;
     padding-top: 17px;
@@ -166,7 +169,7 @@
 
        <div class="wrap">
         <div class="row">
-          <div id="content_fly" class="alert alert-success" role="alert" style="background-color: rgba(0, 0, 0, .7);font-size:57px;text-align: center;">
+          <div id="content_fly" class="alert alert-success" role="alert" style="font-family:CrayonCrumble;background-color: rgba(0, 0, 0, .7);font-size:57px;text-align: center;">
             <a onclick="FC_ContentsCall('talk')" href="#">
               Touch here to talk with me
             </a>  
@@ -174,9 +177,9 @@
         </div>
         <div class="row">
           <div class="col-sm-4">
-              <div id="doc" class="parent" style="background-color: rgba(0, 0, 0, .7);">
+              <div id="doc" class="parent" style="background-color:#1062c8;">
                 <a href="https://www.ynhh.org/find-a-doctor/search-results.aspx?letter=A#results" target="iframe_a">
-                    <img class="child" src="images/icon/doc.jpg">
+                    <img class="child" src="images/icon/find-doc.jpg">
                     <div class="icon-title">Find a <br> Doctor</div>
                 </a>
               </div>
@@ -186,17 +189,17 @@
        
           </div>
           <div class="col-sm-4">
-              <div class="parent" style="background-color: rgba(0, 0, 0, .7);">
+              <div class="parent" style="background-color: #1062c8;">
                 <a onclick="FC_ContentsCall('shop')" href="#">
-                  <img class="child" src="images/icon/map.jpg">
-                  <div class="icon-title">Maps and <br> Directions</div>
+                  <img class="child" src="images/icon/colors.jpg">
+                  <div class="icon-title">Color</div>
                 </a>
               </div>
            
           </div>
           <div class="col-sm-4">
 
-              <div class="parent" style="background-color: rgba(0, 0, 0, .7);">
+              <div class="parent" style="background-color: #1062c8;">
                 <a onclick="FC_ContentsCall('info')" href="#">
                   <img class="child" src="images/icon/story.jpg">
                   <div class="icon-title">Story <br> Time</div>
@@ -209,9 +212,9 @@
           <div class="row">
         
           <div class="col-sm-4">
-              <div class="parent" style="background-color: rgba(0, 0, 0, .7);">
+              <div class="parent" style="background-color: #1062c8;">
                 <a onclick="FC_ContentsCall('RobotAvatar', '')" href="#">
-                  <img class="img-child" src="images/icon/RA.png" >
+                  <img class="img-child" src="images/icon/RA.jpg" >
                   <div class="icon-rtitle">Avatar</div>
                 </a>
               </div>
@@ -219,9 +222,9 @@
           </div>
 
           <div class="col-sm-4">
-              <div class="parent" style="background-color: rgba(0, 0, 0, .7);">
+              <div class="parent" style="background-color: #1062c8;">
                 <a onclick="FC_ContentsCall('PhotoPrinting','')" href="#">
-                  <img class="img-child" src="images/icon/PP.png">
+                  <img class="img-child" src="images/icon/take-a-picture.jpg">
                   <div class="icon-rtitle">Take Photo</div>
                 </a>
               </div>
@@ -230,9 +233,9 @@
           </div>
 
               <div class="col-sm-4">
-              <div class="parent" style="background-color: rgba(0, 0, 0, .7);">
+              <div class="parent" style="background-color: #1062c8;">
                   <a onclick="FC_ContentsCall('RobotDance','')" href="#">
-                    <img class="img-child" src="images/icon/D.png">
+                    <img class="img-child" src="images/icon/dance.jpg">
                     <div class="icon-rtitle">Dance</div>
                   </a>
               </div>
@@ -241,7 +244,7 @@
         </div>
         <div class="row">
           <div class="col-sm-4">
-              <div class="child-life" style="background-color: rgba(0, 0, 0, .7);">
+              <div class="child-life" style="background-color: #1062c8;">
                   <a onclick="FC_ContentsCall('child','')" href="#">
                     
                     <div class="child-title">Child Life</div>

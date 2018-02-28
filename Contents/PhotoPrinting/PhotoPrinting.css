@@ -38,7 +38,7 @@ canvas  {
 /*}*/
 .pannel {
      margin-top: -30px; 
-    width: 1280px;
+    width: 1080px;
     padding: 356px 0 772px 50px;
     text-align: center;
     background-image: url(Image/photo_bg_new.png);
@@ -58,29 +58,29 @@ canvas  {
     font-size: 42px;
     color:white;
 }
-.pannel .center{position:relative;left:-150px;top:100px;}
+.pannel .center{position:relative;left:-35px;top:100px;}
 .email {
 	position: absolute;
 	margin-top: 130px;
-	margin-left: -932px;
+	margin-left: -865px;
 }
 
 .retake {
 	position: absolute;
 	margin-top: 130px;
-	margin-left: -557px;
+	margin-left: -442px;
 }
 
 .capture {
 	position: absolute;
 	margin-top: 120px;
-	margin-left: -982px;
+	margin-left: -867px;
 }
 
 .number_img {
 	position: absolute;
 	margin-top: 250px;
-	margin-left: -657px;
+	margin-left: -542px;
 }
 
 .keyboard {	
